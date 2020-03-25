@@ -1,5 +1,4 @@
 # CodeIgniter-Bootstrap-CRUD
-Menghubungkan CI dengan Database - Edit
 
 **1. Extrak Framework CI**
 
@@ -20,19 +19,26 @@ Menghubungkan CI dengan Database - Edit
   <br>`'hostname' => 'localhost',`
   <br>`'username' => 'root',`
   <br>`'password' => '',`
-  <br>`'database' => 'ci-crud-tambah',`
+  <br>`'database' => 'db_buku',`
 
-  **5. Tambahkan/Edit beberapa file berikut**
-  - application/controllers/C_buku.php -> tambahkan syntax function edit
-  - application/view/edit.php -> tambahkan
-  - application/view/main.php -> tambahkan beberapa syntax
-  - application/models/M_buku.php -> tambahkan syntax function edit database
+**5. application/config/config.php ubdah baris 26**
+  <br>`$config['base_url'] = '';`
+  <br>Edit
+  <br>Alamat disesuaikan dengan nama project
+  <br>`$config['base_url'] = 'http://localhost/belajar-ci/';`
 
+**6. Tambah folder js dan css**
 
-  **6. application/config/routes.php ubah baris 52**
-  `$route['default_controller'] = 'C_buku';`
+  **7. Tambahkan/Edit beberapa file berikut**
+  - application/controllers/C_buku.php -> Menghubungkan View dan Model
+  - application/models/M_buku.php -> Menghubukan controller dengan Database
+  - application/view/v_edit.php -> File untuk edit Data
+  - application/view/v_tampil.php -> File untuk tampil data 
 
-  **7. Buka dengan Link berikut**
-  <br>`localhost/ci-koneksi/index.php`
+  **8. application/config/routes.php ubah baris 52**
+  <br>`$route['default_controller'] = 'C_buku';`
+
+  **9. Buka dengan Link berikut**
+  <br>`localhost/ci-bootstrap-crud`
 
   (catatan ini adalah lanjutan dari repository ci-crud-tambah)
